@@ -22,6 +22,7 @@ admin.site.site_header = 'SICT e-Library Admin Panel'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
+    path('dlapp/', include('dlapp.urls', namespace='app_name')),
     path('', include('dlapp.urls', namespace='app_name'))
 ]
  
