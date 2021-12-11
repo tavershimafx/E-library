@@ -1,0 +1,1 @@
+web: gunicorn sictlibrary.wsgi --log-file -
