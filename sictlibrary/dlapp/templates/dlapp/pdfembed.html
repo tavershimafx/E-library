@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+ {% load static %}
+{% block title %}fileview{% endblock %}
+
+{% block content %}
+ 
+    {% for hld in holdings %}
+     <object data="/dlapp{{hld.holding.url}}" type="application/pdf"   width="950px" height="750px">
+    </object>
+    {% endfor %}
+  
+{% endblock %}

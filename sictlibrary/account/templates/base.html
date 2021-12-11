@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link href="{% static 'assets/images/new/logo1.jpg' %}" rel="icon">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+  <div id='header'>
+    <span class="logo">CSC Library</span>
+    {% comment %} {% if request.user.is_authenticated %} {% endcomment %}
+      <ul class="menu">
+        <li class='selected'>
+          <a style="color:white;" href="{% url 'dlapp:home' %}">Home</a>
+        </li>
+        <li class='selected'>
+          <a style="color:white;" href="{% url 'dlapp:list' %}">View all Books</a>
+        </li>
+       
+      </ul>
+
+    {% comment %} {% endif %} {% endcomment %}
+
+    {% comment %} <span class="user">
+      {% if request.user.is_authenticated %}
+        Hello {{ request.user.first_name }},
+        <a href="{% url 'logout' %}">Sign out</a>
+      {% else %}
+        <a href="{% url 'login' %}">Sign in</a>
+          <a href="{% url '/home' %}">Home</a>
+      {% endif %}
+    </span> {% endcomment %}
+
+  </div>
+  <div id='content'>
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>
+ 

@@ -1,0 +1,224 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+
+{% block nav %}
+
+ <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container">
+
+          <a class="navbar-brand" href="index.html">
+            <img src="{% static 'assets/images/logo/logo-light.png'%}" class="logo-light" alt="logo">
+            <img src="{% static 'assets/images/new/logo1.jpg'%}" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">              
+              
+              <li class="nav__item  has-dropdown">
+                <span data-toggle="dropdown" >Welcome, Peter</span>
+               
+              </li><!-- /.nav-item -->
+             
+               
+            </ul><!-- /.navbar-nav -->
+          </div><!-- /.navbar-collapse -->
+          <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
+            <li>
+              <button class="action__btn action__btn-login">
+              
+                <i class="icon-user"></i> <a class="nav__item-link"
+                              href="{% url 'logout' %}"><span>Logout</span></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+         </nav>
+
+{% endblock %}
+
+{% block content %}
+ <section id="faqs" class="faq pt-120 pb-70" style="background-image:url('{% static 'img/loj.jpg'%}');">
+      <div class="container" >
+        <div class="row" >
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-50" >
+              {% comment %} <h2 class="heading__subtitle"></h2> {% endcomment %}
+              <h3 class="heading__title" style="color:white;">Computer Science E-Library</h3>
+            </div><!-- /.heading -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+
+ <div class="row" id="accordion">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="accordion-item">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse1">
+                <a class="accordion__title" href="#">Artificial Intelligence</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse1" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>ACM International Conference Proceeding Series (ICPS)
+The ACM International Conference Proceeding Series (ICPS) provides a mechanism to publish the contents of conferences, technical symposia and workshops in the ACM Digital Library, increasing 
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>---> View All </span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+
+
+
+            <div class="accordion-item">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse2">
+                <a class="accordion__title" href="#">Computer Networking</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse2" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+
+
+
+            <div class="accordion-item opened">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse3">
+                <a class="accordion__title" href="#">Cyber Security</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse3" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+
+
+
+            <div class="accordion-item">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse4">
+                 <a class="accordion__title" href="#">Operating System</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse4" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+
+
+
+            <div class="accordion-item">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse5">
+               <a class="accordion__title" href="#">Current Topics in IT</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse5" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+          </div><!-- /.col-lg-6 -->
+
+
+
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="accordion-item">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse6">
+                <a class="accordion__title" href="#">Paper Puplications</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse6" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+
+
+
+            <div class="accordion-item">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse7">
+                <a class="accordion__title" href="#">Past Questions</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse7" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+
+
+            <div class="accordion-item">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse8">
+                <a class="accordion__title" href="#">Industry 4.0</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse8" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+
+
+
+            <div class="accordion-item">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse9">
+                <a class="accordion__title" href="#">Programming Concerns</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse9" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+
+
+            <div class="accordion-item opened">
+              <div class="accordion__header" data-toggle="collapse" data-target="#collapse10">
+                <a class="accordion__title" href="#">Others</a>
+              </div><!-- /.accordion-item-header -->
+              <div id="collapse10" class="collapse" data-parent="#accordion">
+                <div class="accordion__body">
+                  <p>Brief note-......   
+                  <button class="action__btn action__btn-login">
+                <a class="nav__item-link" href="list.html"><span>View All</span></a>
+              </button> </p>
+                </div><!-- /.accordion-item-body -->
+              </div>
+            </div><!-- /.accordion-item -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.FAQ -->
+
+    
+
+
+
+{% endblock %}
+ 

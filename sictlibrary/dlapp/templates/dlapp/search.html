@@ -1,0 +1,56 @@
+{% extends 'base_search.html' %}
+ {% load static %}
+{% block title %}Search{% endblock %}
+
+
+{% if query %}
+{% block content %}
+   
+	   <div class="container">
+	   <caption><br>
+     {% comment %} <h4 style="color:white;">Search results for <u> {{ query }}</u></h4> {% endcomment %}
+     <a href="../list"><button class="btn btn-warning mb-2">View All Books</button></a></caption>
+	   <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Categories</th>
+      <th scope="col">Title</th>
+      <th scope="col" colspan="2">Actions</th>
+    </tr> 
+  </thead>
+  <tbody>
+  {% for post in results %}
+    <tr>
+      <th scope="row">{{post.category}}</th>
+	  <td>{{post.title}}</td>
+      <td><a href="{% url 'dlapp:pdf_view' post.id %}" target="_new"><button class="btn btn-warning mb-2" type='submit'>View </button></a></td>
+      <td><a href="/dlapp{{post.holding.url}}"><button class="btn btn-warning mb-2" type="submit">Download</button></a></td>
+    </tr>
+    {% endfor %}
+  	</tbody>
+	</table>
+	</div>
+ 
+{% endblock %}
+
+ {% else %}
+   
+
+
+	{% block search  %}
+
+
+</form>
+	<div class="s-bar" >
+	    <form  class="form-inline" method="get">
+		{{ form }}
+		
+		<button type="submit" class="btn btn-primary mb-2">Search</button>
+	  </form>
+	</div>
+	
+   {% endblock %}
+  {% endif %}
+  
+
+

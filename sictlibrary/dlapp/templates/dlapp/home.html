@@ -1,0 +1,342 @@
+{% extends 'base1.html' %}
+
+{% load static %}
+
+{% block title %}E-Library{% endblock %}
+
+{% block pre%}
+<div class="wrapper">
+    {% comment %} <div class="preloader">
+      <div class="sk-cube-grid">
+        <span class="sk-cube"></span>
+        <span class="sk-cube"></span>
+        <span class="sk-cube"></span>
+        <span class="sk-cube"></span>
+        <span class="sk-cube"></span>
+        <span class="sk-cube"></span>
+        <span class="sk-cube"></span>
+        <span class="sk-cube"></span>
+        <span class="sk-cube"></span>
+      </div>
+    </div> {% endcomment %}
+{% endblock %}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container">
+
+          <a class="navbar-brand" href="index.html">
+            <img src="{% static 'assets/images/logo/logo-light.png'%}" class="logo-light" alt="logo">
+            <img src="{% static 'assets/images/new/logo1.jpg'%}" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+              
+              
+              <li class="nav__item  has-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Books Categories</a>
+                <ul class="dropdown-menu wide-dropdown-menu">
+                  <li class="nav__item">
+                    <div class="row mx-0">
+                      <div class="col-sm-6 dropdown-menu-col">
+                        <a href="#" class="nav__item-link dropdown-menu-title">Artificial Intelligence</a>
+                        <ul class="nav flex-column">
+                          <li class="nav__item"><a class="nav__item-link" href="#">Networking</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="#">Cyber
+                              Security</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="#">Cloud
+                              Computing</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="#">IT
+                              Consulting</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="#">Software
+                              Dev</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="#">IT Support</a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      <div class="col-sm-6 dropdown-menu-col">
+                        <a href="#l" class="nav__item-link dropdown-menu-title">Industries</a>
+                        <ul class="nav flex-column">
+                          <li class="nav__item"><a class="nav__item-link"
+                              href="#">Education,
+                              Non-Profit</a></li> 
+                          <li class="nav__item"><a class="nav__item-link"
+                              href="#">Accounting,
+                              Finance</a></li>  
+                          <li class="nav__item"><a class="nav__item-link"
+                              href="#">Government &
+                              Public</a></li> 
+                          <li class="nav__item"><a class="nav__item-link" href="#">Energy
+                              &
+                              Utilities</a></li>  
+                          <li class="nav__item"><a class="nav__item-link" href="#">Legal,
+                              Law
+                              Firms</a></li> 
+                          <li class="nav__item"><a class="nav__item-link"
+                              href="#">Manufacturing</a>
+                          </li>
+                          
+                        </ul>
+                      </div> 
+                    </div> 
+                  </li>
+                </ul>
+              </li>
+
+
+              <li class="nav__item  has-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">External Resources</a>
+                <ul class="dropdown-menu wide-dropdown-menu">
+                  {% comment %} <li class="nav__item">
+                    <div class="row mx-0"> {% endcomment %}
+                      <div class="col-sm-6 dropdown-menu-col">
+                        <a href="https://futo.goalexandria.com/" class="nav__item-link dropdown-menu-title" target="_new">FUTO E-Lib.</a>
+                        <ul class="nav flex-column">
+                          <li class="nav__item"><a class="nav__item-link" href="https://openlibrary.org/">Open Library</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="https://www.questia.com/library/free-books" target="_new">Questia</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="https://archive.org/" target="_new">Internet Archive</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="https://freecomputerbooks.com/compscCategory.html" target="_new">Comp. Books</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="https://www.pdfdrive.com/" target="_new">PDF drive</a>
+                          </li> 
+                          <li class="nav__item"><a class="nav__item-link" href="https://www.openculture.com/" target="_new">Open Culture</a>
+                          </li>
+                          <li class="nav__item"><a class="nav__item-link" href="https://scholar.google.com/" target="_new">Google Scholar</a>
+                          </li>
+                          
+                          
+                        </ul>
+                      </div>
+                      
+                    {% comment %} </div> 
+                  </li> {% endcomment %}
+                </ul>
+              </li>            
+            </ul>
+          </div>
+          {% comment %} <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
+            <li>
+              <button class="action__btn action__btn-login">
+                <i class="icon-user"></i><span><a href="{% url 'login' %}">Sign in</a></span>
+              </button>
+            </li>
+          </ul> {% endcomment %}
+        </div>
+      </nav>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- =========================
+       Banner layout 5
+      =========================== -->
+    <section class="banner-layout5 banner-layout5-sticky bg-parallax pt-130 pb-0">
+      <div class="bg-img"><img src="{% static 'assets/images/new/bg.jpg'%}" alt="background"></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 d-flex flex-column justify-content-between pb-80">
+            <div class="heading heading-light mb-50 sticky-top">
+              <div class="divider divider-white"></div>
+              <h3 class="heading__title mb-30" style="color:black;">E-Library
+              <p>
+              <a href="{% url 'dlapp:search' %}" class="btn btn__white btn__bordered btn__xl btn__icon">
+                    <span>View/Search for books</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+              </p>
+              </h3>
+              
+            </div><!-- /.heading -->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="contact-info">
+                  <div class="contact__icon"><i class="icon-map-marker"></i></div>
+                  <ul class="contact__list list-unstyled">
+                    <li style="color:rgb(14,43,61);">Federal University of Technology Owerri, Imo State, Nigeria.</li>
+                  </ul>
+                </div><!-- /.contact-item-->
+              </div><!-- /.col-sm-6 -->
+              <div class="col-sm-6">
+                
+              </div><!-- /.col-sm-6 -->
+              <div class="col-sm-6"></div><!-- /.col-sm-6 -->
+            </div><!-- /.row-->
+          </div><!-- /.col-xl-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+            <div class="banner__content">
+              <div class="bg-img"><img src="{% static 'assets/images/backgrounds/3.png'%}" alt="background"></div>
+              <div class="scroll__icon"><i class="icon-mouse"></i></div>
+              <div class="row heading heading-light">
+                <div class="col-sm-6">
+                <h4 class="heading__title mb-30">Department of Computer Science, 
+                (SICT), FUTO.  </h4>
+                </div><!-- /.col-sm-6 -->
+                <div class="col-sm-6">
+                  <p class="heading__desc mb-20">You are welcome to our e-library, find resources and be ahead always.</p>
+                  <p class="heading__desc mb-20">
+                  </p>
+                  <a href="#" class="btn btn__white btn__bordered btn__xl btn__icon">
+                    <span>View Brochure</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.col-sm-6 -->
+              </div><!-- /.row -->
+              <div class="row counters-wrapper counters-light mt-70">
+                <!-- counter item #1 -->
+                <div class="col-sm-4">
+                  <div class="counter-item">
+                    <h4 class="counter">6,154</h4>
+                    <p class="counter__desc">Projects And Student Software Developed till date</p>
+                  </div><!-- /.counter-item -->
+                </div><!-- /.col-sm-4 -->
+                <!-- counter item #2 -->
+                <div class="col-sm-4">
+                  <div class="counter-item">
+                    <h4 class="counter">102 </h4>
+                    <p class="counter__desc">High Index factor publications</p>
+                  </div><!-- /.counter-item -->
+                </div><!-- /.col-sm-4 -->
+                <!-- counter item #3 -->
+                <div class="col-sm-4">
+                  <div class="counter-item">
+                    <h4 class="counter">1,784</h4>
+                    <p class="counter__desc">External Links to internal resources</p>
+                  </div><!-- /.counter-item -->
+                </div><!-- /.col-sm-4 -->
+              </div><!-- /.row -->
+            </div><!-- /.banner__content -->
+            <div class="semi-banner bg-gray">
+              <div class="row row-no-gutter">
+                <div class="col-sm-6">
+                  <div class="semi-banner__content">
+                    <div class="heading">
+                      <h3 class="heading__title mb-30">Artificial Intelligence for Modern Approach</h3>
+                      <p class="heading_desc mb-30">The most comprehensive, up-to-date introduction to the theory and practice of artificial intelligence
+The long-anticipated revision of Artificial Intelligence: A Modern Approach explores the full breadth and depth of the field of artificial intelligence (AI). </p>
+                      <p class="heading_desc mb-30">by Stuart Russell  (Author), Peter Norvig (Author)</p>
+                    </div><!-- /.heading -->
+                   
+                  </div>
+                </div><!-- /.col-sm-6 -->
+                <div class="col-sm-6 d-none d-md-block">
+                  <img src="{% static 'assets/images/new/ai.jpg'%}" alt="banner" class="w-100">
+                </div><!-- /.col-sm-6 -->
+              </div><!-- /.row -->
+            </div><!-- /.semi-banner -->
+            <div class="semi-banner bg-gray">
+              <div class="row row-no-gutter">
+                <div class="col-sm-6">
+                  <div class="cta-banner bg-primary">
+                    <img src="{% static 'assets/images/new/net.jpg'%}" alt="banner" class="w-100">
+                   
+                  </div>
+                </div><!-- /.col-sm-6 -->
+                <div class="col-sm-6">
+                  <div class="semi-banner__content pb-0">
+                    <div class="heading">
+                      <h3 class="heading__title mb-30">The award winning text</h3>
+                    </div><!-- /.heading -->
+                    <h4 class="banner__subheading">Authored by</h4>
+                    <p class="heading_desc">A Distinguished University Professor of Computer Science at the. University of Massachusetts.</p>
+                    <h4 class="banner__subheading">Interactive learning and Videos</h4>
+                    <p class="heading_desc"></p>
+                    <h4 class="banner__subheading">Much more</h4>
+                    <p class="heading_desc">We got also current books with current topics in computing</p>
+                  </div>
+                </div><!-- /.col-sm-6 -->
+              </div><!-- /.row -->
+            </div><!-- /.semi-banner -->
+            <section class="awards bg-secondary">
+              <div class="row heading heading-light mb-60">
+                <div class="col-sm-6">
+                  <h3 class="heading__title">Know us  better</h3>
+                </div><!-- /col-lg-5 -->
+                <div class="col-sm-6">
+                  <p class="heading__desc">Includes the portfolio of all staff of the department. Students reoccuring activities, test, exams and preparatory past questions for international exams.
+                  </p>
+                </div><!-- /.col-lg-5 -->
+              </div><!-- /.row -->
+              <div class="row awards-wrapper">
+                <div class="col-sm-12">
+                  <div class="awards-carousel-wrapper">
+                    <div class="slick-carousel"
+                      data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows": false, "dots": true,"autoplay": true, "autoplaySpeed": 4000, "infinite": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 768, "settings": {"slidesToShow": 1}}, {"breakpoint": 570, "settings": {"slidesToShow": 1}}]}'>
+                      <!-- fancybox item #1 -->
+                      <div class="fancybox-item">
+                        <div class="fancybox__icon-img">
+                          <img src="{% static 'assets/images/awards/icons/1.png'%}" alt="icon">
+                        </div><!-- /.fancybox__icon-img -->
+                        <div class="fancybox__content">
+                          <h4 class="fancybox__title">Style Design</h4>
+                          <p class="fancybox__desc">A style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+                          </p>
+                        </div><!-- /.fancybox-content -->
+                      </div><!-- /.fancybox-item -->
+                      <!-- fancybox item #2 -->
+                      <div class="fancybox-item">
+                        <span class="pinned-ribbon"></span>
+                        <div class="fancybox__icon-img">
+                          <img src="{% static 'assets/images/awards/icons/2.png'%}" alt="icon">
+                        </div><!-- /.fancybox__icon-img -->
+                        <div class="fancybox__content">
+                          <h4 class="fancybox__title">JAVASCRIPT</h4>
+                          <p class="fancybox__desc">A high-level, often just-in-time compiled and multi-paradigm. It has dynamic typing, prototype-based object-orientation and first-class functions
+                          </p>
+                        </div><!-- /.fancybox-content -->
+                      </div><!-- /.fancybox-item -->
+                      <!-- fancybox item #3 -->
+                      <div class="fancybox-item">
+                        <div class="fancybox__icon-img">
+                          <img src="{% static 'assets/images/awards/icons/3.pn'%}g" alt="icon">
+                        </div><!-- /.fancybox__icon-img -->
+                        <div class="fancybox__content">
+                          <h4 class="fancybox__title">C++ </h4>
+                          <p class="fancybox__desc">a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language
+                          </p>
+                        </div><!-- /.fancybox-content -->
+                      </div><!-- /.fancybox-item -->
+                      <!-- fancybox item #4 -->
+                      <div class="fancybox-item">
+                        <div class="fancybox__icon-img">
+                          <img src="{% static 'assets/images/awards/icons/3.png'%}" alt="icon">
+                        </div><!-- /.fancybox__icon-img -->
+                        <div class="fancybox__content">
+                          <h4 class="fancybox__title">PYTHON</h4>
+                          <p class="fancybox__desc">An interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability.
+                          </p>
+                        </div><!-- /.fancybox-content -->
+                      </div><!-- /.fancybox-item -->
+                    </div><!-- /.carousel  -->
+                  </div><!-- /.awards-carousel-wrapper -->
+                </div><!-- /.col-12 -->
+              </div><!-- /.row -->
+            </section>
+          </div><!-- /.col-xl-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Banner layout 5 -->
+
+    <!-- ======================
+      Blog Grid 
+    ========================= -->
+  
+  
+    
+
+    
+  </div><!-- /.wrapper -->
+{% endblock %}
